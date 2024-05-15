@@ -14,48 +14,39 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const workSlides = {
-  slides: [
-    {
-      images: [
+  slides:
+    [
         {
-          title: 'title',
-          path: 'img/thumb1.jpg',
+          title: 'Luxery Services',
+          path: 'img/luxery-services.png',
+          link: 'https://nedjma.cciformationlyon.fr/luxury_services/public/',
+          description: 'Un site d\'offres d\'emploi fait en symfony. Le candidat s\'inscrit, rentre ses informations et seulement après avoir renseigné tous les champs, peut candidater d\'un simple clique !',
         },
         {
-          title: 'title',
-          path: 'img/thumb2.jpg',
+          title: 'Fighting Game',
+          path: 'img/fighting-game.png',
+          link: 'https://nedjk.github.io/fighting-game/',
+          description: 'Un petit jeu de combat 2d en javascript pour mettre en pratique la programmation orientée objet. ATTENTION: Le jeu nécéssite un clavier',
         },
         {
-          title: 'title',
-          path: 'img/thumb3.jpg',
+          title: 'Panier React',
+          path: 'img/panier-react.png',
+          link: 'https://nedjma.cciformationlyon.fr/panier-react/public/',
+          description: 'En exemple de panier e-commerce en symfony et des composants react avec intégration de stripe pour le paiement',
         },
         {
-          title: 'title',
-          path: 'img/thumb4.jpg',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
-          path: 'img/thumb4.jpg',
+          title: 'Mix Vinyl',
+          path: 'img/mix-vinyl.png',
+          link: 'https://nedjma.cciformationlyon.fr/mixed-vinyl/public',
+          description: 'Mon premier mini projet symfony fait avec le tutoriel symfonycast: un site de musique. Le front utilise la library Turbo UX. ',
         },
         {
-          title: 'title',
-          path: 'img/thumb1.jpg',
+          title: 'The Fiasco',
+          path: 'img/the-fiasco.png',
+          link: 'https://nedjma.cciformationlyon.fr/fiasco/',
+          description: 'Exemple de template de la homepage d\'un restaurant',
         },
-        {
-          title: 'title',
-          path: 'img/thumb2.jpg',
-        },
-        {
-          title: 'title',
-          path: 'img/thumb3.jpg',
-        },
-      ],
-    },
-  ],
+      ]
 };
 
 console.log(workSlides.slides)
@@ -89,20 +80,17 @@ export default {
       <!-- <div class="h-full w-full grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer"> -->
       <div class="h-full rounded-lg w-11/12 mx-auto xl:w-full grid grid-rows-3 gap-4 lg:gap-2">
         <div class="flex flex-col gap-5">
-          <h3 class="h3 text-center mx-auto w-full">Description</h3>
-          <p class="max-w-screen-lg description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-            autem? Porro vel ab amet aliquid impedit praesentium odio, libero dolore ut exercitationem numquam aperiam
-            aliquam! Suscipit quod harum odit tempore.</p>
+          <h3 class="h3 text-center mx-auto w-full">{{ slide.title }}</h3>
+          <p class="max-w-screen-lg description">{{slide.description}}</p>
         </div>
         <div class="row-span-2 relative rounded-lg  overflow-hidden flex items-center justify-center group">
           <!-- <img v-for="(image,imgIndex) in slide.images" :key="imgIndex" :src="image.path" alt="" class="relative rounded-lg overflow-hidden  group"> -->
-          <img src="/img/thumb1.jpg" alt="" class="flex items-center justify-center relative overflow-hidden">
-
+          <img :src="slide.path" alt="" class="flex items-center justify-center relative overflow-hidden">
           <!-- Overlay -->
           <div
             class="overlay absolute  inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700 ">
           </div>
-          <a href="/work"
+          <a :href="slide.link" target="_blank"
             class="absolute cursor-pointer bottom-0 translate-y-full group-hover:-translate-y-60 group-hover:md:-translate-y-42 group-hover:lg:-translate-y-34 group-hover:xl:-translate-y-36 transition-all duration-300">
             <div class="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
               <!-- title part 1 -->
