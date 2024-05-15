@@ -22,11 +22,11 @@ const router = createRouter({
       name: 'work',
       component: WorkView
     },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: ContactView
-    },
+    // {
+    //   path: '/contact',
+    //   name: 'contact',
+    //   component: ContactView
+    // },
     {
       path: '/:catchAll(.*)',
       name: '404',

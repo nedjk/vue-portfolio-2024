@@ -1,44 +1,59 @@
-@import './base.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import "./base.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
-body{
-  @apply bg-secondary overflow-hidden leading-relaxed;
+  body {
+    @apply bg-secondary overflow-hidden leading-relaxed;
 
-  p {
-    @apply leading-[1.8] text-white/60 font-light;
+    p {
+      @apply leading-[1.8] text-white/60 font-light text-4xl xl:text-xl;
+    }
+
+    .description {
+      @apply text-3xl md:text-xl lg:text-2xl xl:text-base tracking-wide !leading-[1.4] font-medium;
+    }
+
+    .btn {
+      @apply h-[62px];
+    }
+    .input {
+      @apply h-[72px] xl:h-[52px] text-3xl xl:text-base font-light tracking-[0.2em] xl:leading-7;
+    }
   }
 
-  .btn,
+  .project-btn {
+    background-color: rgb(10 12 15 / 90%);
+    width: fit-content;
+  }
+
+  .logo {
+    @apply text-[25px] leading-tight md:text-[50px] md:leading-[1.3] font-semibold;
+  }
+  .h1 {
+    @apply text-[35px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold;
+  }
+  .h2 {
+    @apply text-[25px] leading-tight md:text-[54px] md:leading-[1.3] mb-4 mt-10 xl:mt-0 font-semibold;
+  }
+  .h3 {
+    @apply text-[30px] leading-tight md:text-[35px] md:leading-[1.3] font-semibold;
+  }
+
   .input {
-    @apply h-[52px];
+    @apply w-full  rounded-lg pl-6;
   }
-}
-
-.logo {
-  @apply text-[20px] leading-tight md:text-[30px] md:leading-[1.3] font-semibold;
-}
-.h1 {
-  @apply text-[35px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold;
-}
-.h2 {
-  @apply text-[35px] leading-tight md:text-[54px] md:leading-[1.3] mb-4 font-semibold;
-}
-
-.input {
-  @apply w-full h-[52px] rounded-lg pl-6 capitalize;
-}
-.input,
-.textarea {
-  @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
-}
-.textarea {
-  @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
-}
+  .input,
+  .textarea {
+    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
+  }
+  .textarea {
+    @apply w-full h-[250px] xl:h-[200px] xl:text-base xl:leading-7  p-6  rounded-lg resize-none text-3xl
+  font-light
+  tracking-[0.2em] leading-10;
+  }
 }
 /* #app {
   max-width: 1280px;

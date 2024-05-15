@@ -9,26 +9,24 @@ import TheBulb from "./../components/TheBulb.vue";
         <TheCircles />
         <div class="container mx-auto">
 
-            <div class="flex flex-col xl:flex-row gap-x-8">
+            <div class="flex flex-col xl:flex-row gap-x-8 md:gap-9">
                 <!-- text -->
 
-                <div class="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4
-            xl:mb-0">
-                    <Transition appear mode="out-in">
-                        <h2 class=" pt-0 md:pt-20 xl: h2 xl:mt-8">
-                            My Work
-                        </h2>
-                    </Transition>
+                <Transition appear mode="out-in" name="appear">
 
-                    <Transition appear mode="out-in">
-                        <p class="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-                            10 years ago, I began freelancing as a developer. Since then, I've
-                            done remote work for agnecies, consulted for startups, and
-                            collaborated on digital products for business ans consumer use.
+                    <div class="text-center gap-16 lg:gap-8 md:gap-4 flex xl:w-[30vw] flex-col xl:text-left mb-4  xl:h-1/2 xl:m-auto
+            ">
+                        <h2 class=" pt-0 h2 mb-0 mt-0">
+                            Mes projets
+                        </h2>
+
+                        <p class="max-w-[800px] mx-auto xl:mx-0 xl:mb-12 px-2 xl:px-0">
+                            Découvrez une sélection de mes projets les plus récents afin d'avoir un aperçu de mon
+                            travail.
                         </p>
-                    </Transition>
-                </div>
-                
+                    </div>
+                </Transition>
+
                 <!-- Slider -->
                 <Transition appear mode="out-in">
                     <div class="w-full xl:max-w-[65%]">
@@ -42,4 +40,31 @@ import TheBulb from "./../components/TheBulb.vue";
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.v-enter-active,
+.v-leave-active,
+.appear-leave-active,
+.appear-enter-active {
+    transition: all 2.5s;
+}
+
+.v-enter-from {
+    opacity: 0;
+    transform: translateY(-50%);
+}
+
+.appear-enter-from {
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.appear-leave-to {
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.v-leave-to {
+    transform: translateY(50%);
+    opacity: 1;
+}
+</style>

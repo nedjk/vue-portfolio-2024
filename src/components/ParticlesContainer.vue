@@ -9,7 +9,7 @@ async function particlesInit(engine) {
     <vue-particles id="tsparticles" class="h-full w-full absolute translate-z-0" :options="{
         fullScreen:{enable:false},
         background:{color:{value:''}},
-        fpsLimit: 120,
+        fpsLimit: 30,
         interactivity: {
             events: {
                 onClick: {
@@ -59,7 +59,7 @@ async function particlesInit(engine) {
                     enable: true,
                     area:800,
                 },
-                value: 180
+                value: 100
             },
             opacity: {
                 value: 0.5

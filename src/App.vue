@@ -71,5 +71,5 @@ import TheHeader from "./components/TheHeader.vue";
   transform: translateX(100%)
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
 </style>
